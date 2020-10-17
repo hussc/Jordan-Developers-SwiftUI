@@ -1,0 +1,6 @@
+framework module Pods_Jordan_Developers {
+  umbrella header "Pods-Jordan Developers-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -3,23 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E426EA9425398F5700F4D4FD /* JobsAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426EA9325398F5700F4D4FD /* JobsAPIRepository.swift */; };
 		E43949022538D7E700022AAD /* Jordan_DevelopersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949012538D7E700022AAD /* Jordan_DevelopersApp.swift */; };
 		E43949042538D7E700022AAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949032538D7E700022AAD /* ContentView.swift */; };
 		E43949062538D7EA00022AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43949052538D7EA00022AAD /* Assets.xcassets */; };
 		E43949092538D7EA00022AAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43949082538D7EA00022AAD /* Preview Assets.xcassets */; };
+		E43949122538D86100022AAD /* JobsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949112538D86100022AAD /* JobsListView.swift */; };
+		E43949152538D86800022AAD /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949142538D86700022AAD /* JobCell.swift */; };
+		E43949332538DB5200022AAD /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949322538DB5200022AAD /* TagsView.swift */; };
+		E43949392538E18900022AAD /* JobDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949382538E18900022AAD /* JobDetailsView.swift */; };
+		E439493D2538E69100022AAD /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = E439493C2538E69100022AAD /* Job.swift */; };
+		E43949482538E84600022AAD /* ApplyJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949472538E84600022AAD /* ApplyJobView.swift */; };
+		E49007ED253B748C00665D9D /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49007EC253B748C00665D9D /* JobRepository.swift */; };
+		E49007F3253B80EA00665D9D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49007F2253B80EA00665D9D /* ErrorView.swift */; };
+		E49007F6253B818B00665D9D /* JobApplyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49007F5253B818B00665D9D /* JobApplyDetails.swift */; };
+		E4E894C925397F5000E6A878 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E894C825397F5000E6A878 /* Company.swift */; };
+		E4E894CC25397FDC00E6A878 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E894CB25397FDC00E6A878 /* JobListViewModel.swift */; };
+		E4E894CF25397FE200E6A878 /* JobCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E894CE25397FE200E6A878 /* JobCellItemViewModel.swift */; };
+		E4E894D225397FE800E6A878 /* JobDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E894D125397FE800E6A878 /* JobDetailsViewModel.swift */; };
+		E4F4E167253B457300F2FA42 /* JobsConstantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F4E166253B457300F2FA42 /* JobsConstantRepository.swift */; };
+		E4F4E174253B48B100F2FA42 /* Pods_Jordan_Developers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B76E6DCA6A2BAB07D10096E /* Pods_Jordan_Developers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B76E6DCA6A2BAB07D10096E /* Pods_Jordan_Developers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jordan_Developers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF95A5FD1BE7D62E0C3AD0CB /* Pods-Jordan Developers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jordan Developers.release.xcconfig"; path = "Target Support Files/Pods-Jordan Developers/Pods-Jordan Developers.release.xcconfig"; sourceTree = "<group>"; };
+		DCF20C1212D7F8D944C54F03 /* Pods-Jordan Developers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jordan Developers.debug.xcconfig"; path = "Target Support Files/Pods-Jordan Developers/Pods-Jordan Developers.debug.xcconfig"; sourceTree = "<group>"; };
+		E426EA9325398F5700F4D4FD /* JobsAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsAPIRepository.swift; sourceTree = "<group>"; };
 		E43948FE2538D7E700022AAD /* Jordan Developers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jordan Developers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43949012538D7E700022AAD /* Jordan_DevelopersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jordan_DevelopersApp.swift; sourceTree = "<group>"; };
 		E43949032538D7E700022AAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E43949052538D7EA00022AAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E43949082538D7EA00022AAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E439490A2538D7EA00022AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E43949112538D86100022AAD /* JobsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsListView.swift; sourceTree = "<group>"; };
+		E43949142538D86700022AAD /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
+		E43949322538DB5200022AAD /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		E43949382538E18900022AAD /* JobDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsView.swift; sourceTree = "<group>"; };
+		E439493C2538E69100022AAD /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		E43949472538E84600022AAD /* ApplyJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyJobView.swift; sourceTree = "<group>"; };
+		E49007EC253B748C00665D9D /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
+		E49007F2253B80EA00665D9D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		E49007F5253B818B00665D9D /* JobApplyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplyDetails.swift; sourceTree = "<group>"; };
+		E4E894C825397F5000E6A878 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		E4E894CB25397FDC00E6A878 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
+		E4E894CE25397FE200E6A878 /* JobCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellItemViewModel.swift; sourceTree = "<group>"; };
+		E4E894D125397FE800E6A878 /* JobDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewModel.swift; sourceTree = "<group>"; };
+		E4F4E166253B457300F2FA42 /* JobsConstantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsConstantRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +61,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F4E174253B48B100F2FA42 /* Pods_Jordan_Developers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		364B2C303CF21523F431DBAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B76E6DCA6A2BAB07D10096E /* Pods_Jordan_Developers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39BF610821CA7AD8F46E2E69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCF20C1212D7F8D944C54F03 /* Pods-Jordan Developers.debug.xcconfig */,
+				AF95A5FD1BE7D62E0C3AD0CB /* Pods-Jordan Developers.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E43948F52538D7E700022AAD = {
 			isa = PBXGroup;
 			children = (
 				E43949002538D7E700022AAD /* Jordan Developers */,
 				E43948FF2538D7E700022AAD /* Products */,
+				39BF610821CA7AD8F46E2E69 /* Pods */,
+				364B2C303CF21523F431DBAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +108,10 @@
 			children = (
 				E43949012538D7E700022AAD /* Jordan_DevelopersApp.swift */,
 				E43949032538D7E700022AAD /* ContentView.swift */,
+				E4E894D425397FED00E6A878 /* Repositories */,
+				E439493B2538E68A00022AAD /* Models */,
+				E439494C2538E99900022AAD /* View Models */,
+				E43949402538E81900022AAD /* Views */,
 				E43949052538D7EA00022AAD /* Assets.xcassets */,
 				E439490A2538D7EA00022AAD /* Info.plist */,
 				E43949072538D7EA00022AAD /* Preview Content */,
@@ -69,6 +127,57 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E439493B2538E68A00022AAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E439493C2538E69100022AAD /* Job.swift */,
+				E4E894C825397F5000E6A878 /* Company.swift */,
+				E49007F5253B818B00665D9D /* JobApplyDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E43949402538E81900022AAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E43949462538E83400022AAD /* General Views */,
+				E43949112538D86100022AAD /* JobsListView.swift */,
+				E43949382538E18900022AAD /* JobDetailsView.swift */,
+				E43949142538D86700022AAD /* JobCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E43949462538E83400022AAD /* General Views */ = {
+			isa = PBXGroup;
+			children = (
+				E43949322538DB5200022AAD /* TagsView.swift */,
+				E43949472538E84600022AAD /* ApplyJobView.swift */,
+				E49007F2253B80EA00665D9D /* ErrorView.swift */,
+			);
+			path = "General Views";
+			sourceTree = "<group>";
+		};
+		E439494C2538E99900022AAD /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4E894CB25397FDC00E6A878 /* JobListViewModel.swift */,
+				E4E894D125397FE800E6A878 /* JobDetailsViewModel.swift */,
+				E4E894CE25397FE200E6A878 /* JobCellItemViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		E4E894D425397FED00E6A878 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				E49007EC253B748C00665D9D /* JobRepository.swift */,
+				E426EA9325398F5700F4D4FD /* JobsAPIRepository.swift */,
+				E4F4E166253B457300F2FA42 /* JobsConstantRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E439490D2538D7EA00022AAD /* Build configuration list for PBXNativeTarget "Jordan Developers" */;
 			buildPhases = (
+				A31E49DD2CB57728D96CBD83 /* [CP] Check Pods Manifest.lock */,
 				E43948FA2538D7E700022AAD /* Sources */,
 				E43948FB2538D7E700022AAD /* Frameworks */,
 				E43948FC2538D7E700022AAD /* Resources */,
+				6B2AA19BEC1AC41DFE2D0185 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +244,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B2AA19BEC1AC41DFE2D0185 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jordan Developers/Pods-Jordan Developers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jordan Developers/Pods-Jordan Developers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jordan Developers/Pods-Jordan Developers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A31E49DD2CB57728D96CBD83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jordan Developers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E43948FA2538D7E700022AAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E426EA9425398F5700F4D4FD /* JobsAPIRepository.swift in Sources */,
+				E43949122538D86100022AAD /* JobsListView.swift in Sources */,
+				E43949332538DB5200022AAD /* TagsView.swift in Sources */,
+				E4E894CC25397FDC00E6A878 /* JobListViewModel.swift in Sources */,
+				E4E894CF25397FE200E6A878 /* JobCellItemViewModel.swift in Sources */,
+				E4E894C925397F5000E6A878 /* Company.swift in Sources */,
+				E43949482538E84600022AAD /* ApplyJobView.swift in Sources */,
+				E4E894D225397FE800E6A878 /* JobDetailsViewModel.swift in Sources */,
 				E43949042538D7E700022AAD /* ContentView.swift in Sources */,
 				E43949022538D7E700022AAD /* Jordan_DevelopersApp.swift in Sources */,
+				E4F4E167253B457300F2FA42 /* JobsConstantRepository.swift in Sources */,
+				E49007ED253B748C00665D9D /* JobRepository.swift in Sources */,
+				E43949152538D86800022AAD /* JobCell.swift in Sources */,
+				E43949392538E18900022AAD /* JobDetailsView.swift in Sources */,
+				E49007F6253B818B00665D9D /* JobApplyDetails.swift in Sources */,
+				E439493D2538E69100022AAD /* Job.swift in Sources */,
+				E49007F3253B80EA00665D9D /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +432,7 @@
 		};
 		E439490E2538D7EA00022AAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCF20C1212D7F8D944C54F03 /* Pods-Jordan Developers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -285,6 +454,7 @@
 		};
 		E439490F2538D7EA00022AAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF95A5FD1BE7D62E0C3AD0CB /* Pods-Jordan Developers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
