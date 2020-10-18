@@ -63,19 +63,16 @@ struct JobDetailsView: View {
             Spacer()
             
             ApplyJobView(isFavorited: $detailsViewModel.job.isFavorited){
-                guard let applyDetails = self.detailsViewModel.link else {
-                    return
-                }
-                
                 // apply to this job
-                switch applyDetails.type {
+                let details = self.detailsViewModel.link
+                switch details.type {
                 case .email:
-                    if let mailURL = URL(string: "mailto:\(applyDetails.url)"){
+                    if let mailURL = URL(string: "mailto:\(details.url)"){
                         UIApplication.shared.open(mailURL)
                     }
                     break
                 case .redirect:
-                    if let url = URL(string: applyDetails.url) {
+                    if let url = URL(string: details.url) {
                         UIApplication.shared.open(url)
                     }
                     break

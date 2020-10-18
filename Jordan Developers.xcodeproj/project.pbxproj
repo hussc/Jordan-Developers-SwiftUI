@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E426EA9425398F5700F4D4FD /* JobsAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426EA9325398F5700F4D4FD /* JobsAPIRepository.swift */; };
+		E42C6B27253C8B3E00E4ADE5 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42C6B26253C8B3E00E4ADE5 /* ViewModelState.swift */; };
 		E43949022538D7E700022AAD /* Jordan_DevelopersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949012538D7E700022AAD /* Jordan_DevelopersApp.swift */; };
 		E43949042538D7E700022AAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43949032538D7E700022AAD /* ContentView.swift */; };
 		E43949062538D7EA00022AAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43949052538D7EA00022AAD /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		AF95A5FD1BE7D62E0C3AD0CB /* Pods-Jordan Developers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jordan Developers.release.xcconfig"; path = "Target Support Files/Pods-Jordan Developers/Pods-Jordan Developers.release.xcconfig"; sourceTree = "<group>"; };
 		DCF20C1212D7F8D944C54F03 /* Pods-Jordan Developers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jordan Developers.debug.xcconfig"; path = "Target Support Files/Pods-Jordan Developers/Pods-Jordan Developers.debug.xcconfig"; sourceTree = "<group>"; };
 		E426EA9325398F5700F4D4FD /* JobsAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsAPIRepository.swift; sourceTree = "<group>"; };
+		E42C6B26253C8B3E00E4ADE5 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		E43948FE2538D7E700022AAD /* Jordan Developers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jordan Developers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43949012538D7E700022AAD /* Jordan_DevelopersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jordan_DevelopersApp.swift; sourceTree = "<group>"; };
 		E43949032538D7E700022AAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				E4E894CB25397FDC00E6A878 /* JobListViewModel.swift */,
 				E4E894D125397FE800E6A878 /* JobDetailsViewModel.swift */,
 				E4E894CE25397FE200E6A878 /* JobCellItemViewModel.swift */,
+				E42C6B26253C8B3E00E4ADE5 /* ViewModelState.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				E4E894C925397F5000E6A878 /* Company.swift in Sources */,
 				E43949482538E84600022AAD /* ApplyJobView.swift in Sources */,
 				E4E894D225397FE800E6A878 /* JobDetailsViewModel.swift in Sources */,
+				E42C6B27253C8B3E00E4ADE5 /* ViewModelState.swift in Sources */,
 				E43949042538D7E700022AAD /* ContentView.swift in Sources */,
 				E43949022538D7E700022AAD /* Jordan_DevelopersApp.swift in Sources */,
 				E4F4E167253B457300F2FA42 /* JobsConstantRepository.swift in Sources */,

@@ -11,37 +11,40 @@ import Resolver
 
 class JobListViewModel: ObservableObject {
     
-    enum State {
-        case idle
-        case loading
-        case failed(Error)
-        case loaded([JobCellItemViewModel])
-    }
-    
+    /**
+     aka. data source
+     */
     @LazyInjected var repository: JobRepository
     
-    @Published private(set) var jobCellViewModels = [JobCellItemViewModel]()
-    @Published private(set) var state = State.idle
+    /**
+     We store the data in the state object
+     */
+    @Published private(set) var state = ViewModelState.idle
     
+    /**
+     Cancel all operations upon deallocation
+     */
     private var cancellables = Set<AnyCancellable>()
     
     init() {
         performTheFuckingLoad()
     }
     
+    /**
+     Sorry for such words :)
+     */
     func performTheFuckingLoad(){
         state = .loading
         
-        repository.getJobs { (result) in
-            switch result {
-            case .success(let jobs):
-                self.jobCellViewModels = jobs.map(JobCellItemViewModel.init)
-                self.state = .loaded(self.jobCellViewModels)
-                return
-            case .failure(let error):
+        repository.getJobs().map { jobs in
+            jobs.map(JobCellItemViewModel.init)
+        }.sink { (result) in
+            if case .failure(let error) = result {
                 self.state = .failed(error)
-                break
             }
-        }
+        } receiveValue: { (jobs) in
+            self.state = .loaded(jobs)
+        }.store(in: &cancellables)
     }
 }
+

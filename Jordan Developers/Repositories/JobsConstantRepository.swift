@@ -6,17 +6,26 @@
 //
 
 import Foundation
+import Combine
 
 class TestDataJobRepository: JobRepository {
-    func getJobs(completion: @escaping ((Result<[Job], Error>) -> Void)) {
-        
+    func getDetails(for job: Job) -> AnyPublisher<Job, Error> {
+        return Just(job).setFailureType(to: Error.self).eraseToAnyPublisher()
     }
     
-    func getDetails(for job: Job, completion: @escaping ((Result<Job, Error>) -> Void)) {
+    func apply(to job: Job) -> AnyPublisher<JobApplyDetails, Error> {
+        let sampleDetails = JobApplyDetails(type: .redirect, url: "")
         
+        return Just(sampleDetails).setFailureType(to: Error.self).eraseToAnyPublisher()
     }
     
-    func apply(to job: Job, completion: @escaping ((Result<JobApplyDetails, Error>) -> Void)) {
+    func getJobs() -> AnyPublisher<[Job], Error> {
+        let jobs: [Job] = [
+            .sample(),
+            .sample(),
+            .sample()
+        ]
         
+        return Just(jobs).setFailureType(to: Error.self).eraseToAnyPublisher()
     }
 }

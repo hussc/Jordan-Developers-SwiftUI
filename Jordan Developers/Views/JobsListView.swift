@@ -26,16 +26,16 @@ struct JobsListView: View {
                     self.performTheLoad()
                 }
             )
-        case .loaded:
-            return AnyView(bodyForContentState())
+        case .loaded(let items):
+            return AnyView(bodyForContentState(for: items))
         }
     }
     
-    func bodyForContentState() -> some View {
+    func bodyForContentState(for viewModels: [JobCellItemViewModel]) -> some View {
         NavigationView {
             ScrollView {
                 VStack(spacing: -15) {
-                    ForEach(viewModel.jobCellViewModels) { item in
+                    ForEach(viewModels) { item in
                         JobCell(jobCellVM: item).onTapGesture {
                             self.itemDetailSelection = item.job
                         }

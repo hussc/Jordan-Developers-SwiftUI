@@ -22,27 +22,23 @@ class JobsAPIRepository: JobRepository {
     
     private var cancellables: [AnyCancellable] = []
     
-    init(){
+    init(){ }
+    
+    func getJobs() -> AnyPublisher<[Job], Error> {
+        self.publisher(for: baseURL.appendingPathComponent("jobs"))
     }
     
-    func getJobs(completion: @escaping ((Result<[Job], Error>) -> Void)) {
-        request(for: baseURL.appendingPathComponent("jobs"),
-                completion: completion)
+    func getDetails(for job: Job) -> AnyPublisher<Job, Error> {
+        publisher(for: baseURL.appendingPathComponent("jobs").appendingPathComponent("\(job.id)"))
     }
     
-    func getDetails(for job: Job, completion: @escaping ((Result<Job, Error>) -> Void)) {
-        request(for: baseURL.appendingPathComponent("jobs").appendingPathComponent("\(job.id)"),
-                completion: completion)
-    }
-    
-    func apply(to job: Job, completion: @escaping ((Result<JobApplyDetails, Error>) -> Void)) {
-        request(for: baseURL.appendingPathComponent("jobs").appendingPathComponent("\(job.id)").appendingPathComponent("apply"),
-                method: "POST",
-                completion: completion)
+    func apply(to job: Job) -> AnyPublisher<JobApplyDetails, Error> {
+        publisher(for: baseURL.appendingPathComponent("jobs").appendingPathComponent("\(job.id)").appendingPathComponent("apply"),
+                method: "POST")
     }
     
     fileprivate func request<T: Codable>(for url: URL, method: String = "GET", completion: @escaping ((Result<T, Error>) -> Void)){
-        publisher(for: url, method: method, resultType: T.self).sink { (response) in
+        publisher(for: url, method: method).sink { (response) in
             if case .failure(let error) = response {
                 print("Error Recieved: \(error)")
                 completion(.failure(error))
@@ -52,7 +48,7 @@ class JobsAPIRepository: JobRepository {
         }.store(in: &cancellables)
     }
     
-    fileprivate func publisher<T: Codable>(for url: URL, method: String = "GET", resultType: T.Type) -> AnyPublisher<T, Error> {
+    fileprivate func publisher<T: Codable>(for url: URL, method: String = "GET") -> AnyPublisher<T, Error> {
         var request: URLRequest = .init(url: url)
         
         request.setValue(email, forHTTPHeaderField: "User-Agent")

@@ -13,16 +13,16 @@ protocol JobRepository {
     /**
      Returns a list of jobs available
      */
-    func getJobs(completion: @escaping ((Result<[Job], Error>) -> Void))
+    func getJobs() -> AnyPublisher<[Job], Error>
     
     /**
      Returns the details for the job, especially filling the description
      */
-    func getDetails(for job: Job, completion: @escaping ((Result<Job, Error>) -> Void))
+    func getDetails(for job: Job) -> AnyPublisher<Job, Error> 
     
     /**
      gets the apply details for a job
      */
-    func apply(to job: Job, completion: @escaping ((Result<JobApplyDetails, Error>) -> Void))
+    func apply(to job: Job) -> AnyPublisher<JobApplyDetails, Error>
 }
 

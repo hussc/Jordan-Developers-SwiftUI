@@ -15,7 +15,7 @@ class JobDetailsViewModel: Identifiable, ObservableObject {
     
     @Published var job: Job
     @Published var description: String = ""
-    @Published var link: JobApplyDetails?
+    @Published var link: JobApplyDetails
     
     var id: Int = -1
    
@@ -23,6 +23,7 @@ class JobDetailsViewModel: Identifiable, ObservableObject {
     
     init(job: Job){
         self.job = job
+        self.link = JobApplyDetails(type: .redirect, url: "")
         
         $job.compactMap { $0.id }
           .assign(to: \.id, on: self)
@@ -32,16 +33,15 @@ class JobDetailsViewModel: Identifiable, ObservableObject {
             .assign(to: \.description, on: self)
             .store(in: &cancellables)
         
-        $job.sink { (job) in
-            self.repository.apply(to: job, completion: self.apply)
-            }
-        .store(in: &cancellables)
+        $job.flatMap { (job) in
+            self.repository.apply(to: job)
+        }.catch { _ in
+            return Just(JobApplyDetails(type: .redirect, url: ""))
+        }.assign(to: \.link, on: self).store(in: &cancellables)
         
-        self.repository.getDetails(for: job) { (result) in
-            if case .success(let newJob) = result {
-                self.job = newJob
-            }
-        }
+        self.repository.getDetails(for: self.job).catch { _ in
+            Just(job)
+        }.assign(to: \.job, on: self).store(in: &cancellables)
     }
     
     func apply(_ result: Result<JobApplyDetails, Error>){
