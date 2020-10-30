@@ -22,6 +22,7 @@
 		E49007ED253B748C00665D9D /* JobRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49007EC253B748C00665D9D /* JobRepository.swift */; };
 		E49007F3253B80EA00665D9D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49007F2253B80EA00665D9D /* ErrorView.swift */; };
 		E49007F6253B818B00665D9D /* JobApplyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49007F5253B818B00665D9D /* JobApplyDetails.swift */; };
+		E4DF78C9254BF1DA0061EE43 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DF78C8254BF1DA0061EE43 /* WebView.swift */; };
 		E4E894C925397F5000E6A878 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E894C825397F5000E6A878 /* Company.swift */; };
 		E4E894CC25397FDC00E6A878 /* JobListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E894CB25397FDC00E6A878 /* JobListViewModel.swift */; };
 		E4E894CF25397FE200E6A878 /* JobCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E894CE25397FE200E6A878 /* JobCellItemViewModel.swift */; };
@@ -51,6 +52,7 @@
 		E49007EC253B748C00665D9D /* JobRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobRepository.swift; sourceTree = "<group>"; };
 		E49007F2253B80EA00665D9D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		E49007F5253B818B00665D9D /* JobApplyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobApplyDetails.swift; sourceTree = "<group>"; };
+		E4DF78C8254BF1DA0061EE43 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		E4E894C825397F5000E6A878 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		E4E894CB25397FDC00E6A878 /* JobListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewModel.swift; sourceTree = "<group>"; };
 		E4E894CE25397FE200E6A878 /* JobCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellItemViewModel.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				E43949322538DB5200022AAD /* TagsView.swift */,
 				E43949472538E84600022AAD /* ApplyJobView.swift */,
 				E49007F2253B80EA00665D9D /* ErrorView.swift */,
+				E4DF78C8254BF1DA0061EE43 /* WebView.swift */,
 			);
 			path = "General Views";
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				E43949022538D7E700022AAD /* Jordan_DevelopersApp.swift in Sources */,
 				E4F4E167253B457300F2FA42 /* JobsConstantRepository.swift in Sources */,
 				E49007ED253B748C00665D9D /* JobRepository.swift in Sources */,
+				E4DF78C9254BF1DA0061EE43 /* WebView.swift in Sources */,
 				E43949152538D86800022AAD /* JobCell.swift in Sources */,
 				E43949392538E18900022AAD /* JobDetailsView.swift in Sources */,
 				E49007F6253B818B00665D9D /* JobApplyDetails.swift in Sources */,

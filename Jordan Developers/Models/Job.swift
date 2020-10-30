@@ -39,7 +39,7 @@ extension Job {
     static func sample() -> Job {
         Job(id: -1,
             title: "Backend Developer",
-            company: .init(name: "Uber", logo_url: URL(string: "")),
+            company: .init(name: "Uber", logo_url: URL(string: "https://homepages.cae.wisc.edu/~ece533/images/airplane.png")),
             publishedAt: "20/9/2020",
             tags: ["Backend", "Uber"],
             description: nil)

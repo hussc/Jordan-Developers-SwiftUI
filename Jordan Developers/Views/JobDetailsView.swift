@@ -48,9 +48,17 @@ struct JobDetailsView: View {
                         VStack(alignment: .leading, spacing: 5) {
                             Text("Job Description")
                                 .font(.system(size: 16, weight: .heavy, design: .monospaced))
-                            Text(detailsViewModel.description)
-                                .font(.system(size: 14, weight: .regular, design: .default))
-                                .lineLimit(nil)
+                            
+                            ZStack {
+                                // we put a text so the web view can take the full space
+                                Text(detailsViewModel.description)
+                                    .font(.system(size: 12, weight: .regular, design: .default))
+                                    .lineLimit(nil)
+                                    .hidden()
+                                WebView(text: .constant(detailsViewModel.description))
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+
+                            }
                         }
                     }
                     .padding(.horizontal, 20)

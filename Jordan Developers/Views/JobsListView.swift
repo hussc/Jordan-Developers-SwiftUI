@@ -19,7 +19,8 @@ struct JobsListView: View {
     var body: some View {
         switch viewModel.state {
         case .idle, .loading:
-            return AnyView(ProgressView().progressViewStyle(DefaultProgressViewStyle()))
+            let items = Array(repeating: Job.sample(), count: 5).map { JobCellItemViewModel(job: $0) }
+            return AnyView(bodyForContentState(for: items).redacted(reason: .placeholder))
         case .failed(let error):
             return AnyView(
                 ErrorView(error: error){
@@ -27,7 +28,7 @@ struct JobsListView: View {
                 }
             )
         case .loaded(let items):
-            return AnyView(bodyForContentState(for: items))
+            return AnyView(bodyForContentState(for: items).redacted(reason: []))
         }
     }
     
